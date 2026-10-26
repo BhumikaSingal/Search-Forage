@@ -1,0 +1,81 @@
+{
+  "description": "Small labeled IR collection for BM25 evaluation. Relevance grades: 0=irrelevant (omitted), 1=partially relevant, 2=highly relevant.",
+  "documents": {
+    "d01": "BM25 is a probabilistic ranking function used by search engines to estimate relevance of documents to a query.",
+    "d02": "Okapi BM25 scores documents using term frequency saturation and document length normalization with parameters k1 and b.",
+    "d03": "Inverted indexes map each term to the list of documents that contain it for fast boolean retrieval.",
+    "d04": "TF-IDF weights terms by how often they appear in a document and how rare they are across the collection.",
+    "d05": "Precision at k measures the fraction of the top k retrieved documents that are relevant to the query.",
+    "d06": "nDCG discounts graded relevance gains by rank position and normalizes against an ideal ranking.",
+    "d07": "Tokenization splits text into normalized word tokens after Unicode case folding and punctuation removal.",
+    "d08": "Python is a popular programming language for building information retrieval prototypes and machine learning pipelines.",
+    "d09": "FastAPI is a modern Python web framework for building HTTP APIs with automatic OpenAPI documentation.",
+    "d10": "Elasticsearch implements a variant of BM25 as its default textual similarity scoring model.",
+    "d11": "Average document length is a corpus statistic used by BM25 to normalize long and short documents fairly.",
+    "d12": "Document frequency counts how many documents contain a term and is the basis of inverse document frequency.",
+    "d13": "Boolean AND search returns only documents that contain every query term without ranking by importance.",
+    "d14": "Neural re-rankers use transformer embeddings to reorder an initial candidate list from a lexical retriever.",
+    "d15": "Stop words are very common terms that some retrieval systems discard before indexing or querying.",
+    "d16": "A query with only unknown vocabulary terms should not retrieve meaningful lexical matches.",
+    "d17": "Hand-calculated BM25 examples verify term frequency and IDF components against a trusted reference.",
+    "d18": "Evaluation datasets pair queries with graded relevance judgments so ranking quality can be measured.",
+    "d19": "Unix pipes connect command-line tools; they are unrelated to search ranking algorithms.",
+    "d20": "Gardening tips for watering tomatoes in summer heat have nothing to do with information retrieval."
+  },
+  "queries": [
+    {
+      "query_id": "q1",
+      "query": "BM25 ranking term frequency",
+      "relevance": {
+        "d01": 2,
+        "d02": 2,
+        "d10": 2,
+        "d11": 1,
+        "d04": 1,
+        "d17": 1
+      }
+    },
+    {
+      "query_id": "q2",
+      "query": "precision ndcg evaluation",
+      "relevance": {
+        "d05": 2,
+        "d06": 2,
+        "d18": 2,
+        "d17": 1
+      }
+    },
+    {
+      "query_id": "q3",
+      "query": "inverted index document frequency",
+      "relevance": {
+        "d03": 2,
+        "d12": 2,
+        "d13": 1,
+        "d11": 1
+      }
+    },
+    {
+      "query_id": "q4",
+      "query": "python fastapi web api",
+      "relevance": {
+        "d09": 2,
+        "d08": 1
+      }
+    },
+    {
+      "query_id": "q5",
+      "query": "tokenization unicode normalize",
+      "relevance": {
+        "d07": 2
+      }
+    },
+    {
+      "query_id": "q6",
+      "query": "gardening tomatoes watering",
+      "relevance": {
+        "d20": 2
+      }
+    }
+  ]
+}
